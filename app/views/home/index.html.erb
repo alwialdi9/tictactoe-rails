@@ -1,1 +1,16 @@
+<div class="card mx-auto" style="width: 450px;">
+  <div class="card-header">
+    Fill username
+  </div>
+  <div class="card-body">
+    <%= form_with(url: '/home/create', local: true) do |form| %>
 
+    <div class="mb-3">
+      <%= form.label :username, class: 'form-label', for: 'username' %>
+      <%= form.text_field :username, class: 'form-control', id: 'username', placeholder: 'bagogo99'%>
+    </div>
+  
+      <%= form.submit "Next", class: 'btn btn-primary' %>
+  <% end %>
+  </div>
+</div>
